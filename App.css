@@ -1,0 +1,6 @@
+.landing-page {
+ background-image: url('https://cdn.pixabay.com/photo/2015/12/01/20/28/forest-1072828_1280.jpg');
+ background-size: cover;
+ height: 100vh;
+}
+.about-us-container { padding: 20px; }
