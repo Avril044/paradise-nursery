@@ -1,14 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import ProductList from './ProductList';
 import './App.css';
-function App(){
- return(
-  <div className="landing-page">
-   <h1>Paradise Nursery</h1>
-   <p>Where Green Meets Serenity</p>
-   <Link to="/products"><button>Comenzar</button></Link>
-   <Link to="/products"><button>Get Started</button></Link>
-  </div>
- )
+function App() {
+  const [showProductList, setShowProductList] = useState(false);
+  const handleGetStartedClick = () => { setShowProductList(true); };
+  return (
+    <div>
+      <div className="landing-page">
+        <h1>Welcome to Paradise Nursery</h1>
+        <p>Where Green Meets Serenity</p>
+        <button onClick={handleGetStartedClick}>Get Started</button>
+        <button onClick={handleGetStartedClick}>Comenzar</button>
+      </div>
+      {showProductList && <ProductList />}
+    </div>
+  );
 }
 export default App;
